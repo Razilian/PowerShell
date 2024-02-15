@@ -51,7 +51,7 @@ function Get-ADUserReport {
         }
     }
     
-    #region // ================================================ [ Function - [Back Menu] ]
+    #region // ================================================================================================ [ Function - [Back Menu] ]
     function Wait-Redirection($Menu, [int]$Timer) {
         for ($sec = $Timer; $sec -gt -1; $sec--) {
             Write-Host -NoNewLine ("`r$s Back to $Menu..." + (": {0:d2}" -f $sec)) -F DarkYellow
@@ -117,7 +117,7 @@ function Get-ADUserReport {
         Wait-Redirection "Menu" 2
     }
 
-    #region // ================================================ [ Active Directory - [Menu]]
+    #region // ================================================================================================ [ Active Directory - [Menu]]
     function Approve-MenuADUser {
         Write-Host "//" + $l "[ Menu Active Directory ]" -F DarkGreen
         Write-Host $s"In this section you will be able to make some modifications to the user." -F Gray
@@ -140,7 +140,7 @@ function Get-ADUserReport {
         }
     }
 
-    #region // ================================================ [ Active Directory - [Launch Initial Code] ]
+    #region // ================================================================================================ [ Active Directory - [Launch Initial Code] ]
     Write-Host "//" + $l "[ Start >>> ]" -F DarkGreen
     Write-Host $s"Type Request: (AD) Active Directory." -F DarkGray
     Initialize-GlobalVariablesAD
